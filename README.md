@@ -1,6 +1,6 @@
 # LEMP-debian
 debian install LEMP
-# Install Nginx, PHP 8, MariaDB, Laravel 8, Certbot(Let's Encrypt) on Debian 10
+# Install Nginx, PHP 8, MariaDB, Laravel 8, on Debian 10/11
 
 **Tutorial works for DidgitalOcean,VScale.**
 
@@ -114,6 +114,12 @@ debian install LEMP
     ```
     composer install
     ```
+* Install composer dependencies
+
+    ```
+    composer create-project laravel/laravel example-app (from documentation laravel.com)
+    ```    
+    
 * Add db settings to `.env`.
 
     ```
@@ -205,25 +211,6 @@ debian install LEMP
     npm install
     npm run prod
     ```
-* Add cron task
-
-    ```
-    crontab -l | { cat; echo "* * * * * php /var/www/example/artisan schedule:run >> /dev/null 2>&1"; } | crontab -
-    ```
-* Check cron file
-
-     ```
-    more /var/spool/cron/crontabs/root
-    ```
-* Install cerbot
-
-    ```
-    sudo apt install snapd
-    sudo snap install core; sudo snap refresh core
-    sudo snap install --classic certbot
-    sudo ln -s /snap/bin/certbot /usr/bin/certbot
-    sudo certbot certonly --nginx
-    ```
 
 ## Helpful commands
 
@@ -232,8 +219,6 @@ debian install LEMP
 `sudo service nginx reload` - restart nginx
 
 `sudo systemctl restart mariadb.service` - restart mariadb
-
-`sudo certbot certonly --nginx` - create lets encrypt certificate
 
 `tar -cvpzf /backup.tar.gz --exclude=/backup.tar.gz --one-file-system /` - create system backup to zip archive
 
