@@ -89,10 +89,7 @@ debian install LEMP
     ```
     git clone https://github.com/name/example.git example
     ```
-
-* **If you have private repo**, then [create github token](https://github.com/settings/tokens) and enter it instead of password.
-
-    To save token for next time
+    
     ```
     git config --global credential.helper store
     ```  
