@@ -114,11 +114,14 @@ debian install LEMP
     ```
     composer install
     ```
-* Install composer dependencies
-
+* Install laravel with composer
     ```
     composer create-project laravel/laravel example-app (from documentation laravel.com)
     ```    
+    ```
+    composer global require laravel/installer (from documentation laravel.com)
+    laravel new example-app
+    ``` 
     
 * Add db settings to `.env`.
 
