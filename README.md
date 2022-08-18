@@ -1,6 +1,6 @@
 # LEMP-debian
 debian install LEMP
-# Install Nginx, PHP 8, MariaDB, Laravel 8, on Debian 10/11
+# Install Nginx, PHP 8, MariaDB, Laravel 8,Node js on Debian 10/11
 
 **Tutorial works for DidgitalOcean,VScale.**
 
