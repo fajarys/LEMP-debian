@@ -22,13 +22,13 @@ debian install LEMP
 * Install MariaDB
 
     ```
-    sudo apt install mariadb-server
+    sudo apt install mariadb-server or mysql-server
     ```
 
 * Open MariaDB
 
     ```
-    sudo mariadb or sudo mysql-server
+    sudo mariadb or sudo mysql 
     ```
 
 * Create database
